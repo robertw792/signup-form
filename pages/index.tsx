@@ -1,13 +1,16 @@
 import type { NextPage } from "next";
-
 const Home: NextPage = () => {
   return (
-    <div id="mobile-bg"  className="flex justify-center items-center min-h-screen bg-red-200">
-            <style jsx>{`
-        #mobile-bg {background-image: url("C:/Users/robert.williams/repos/signup-form/pages/bg-intro-mobile.png")}
-      `}</style>
-
-      <div className="w-full max-w-xs bg-repeat">
+    <>
+    <div className="flex justify-center items-center min-h-screen text-[16px] text-white bg-red-300 bg-cover bg-[url(../public/bg-intro-mobile.png)] sm:bg-[url(../public/bg-intro-desktop.png)]">
+      <div className="w-full max-w-xs">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold mb-8">Learn to code by watching others</h1>
+          <p>See how experience developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable</p>
+        </div>
+        <div className="bg-violet-600 text-center rounded-lg shadow-2xl p-4 mb-6 mt-10">
+          <p className=""><b>Try it free 7 days</b> then<br/> $20/mo. thereafter</p>
+        </div>
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
             <label
@@ -73,11 +76,12 @@ const Home: NextPage = () => {
               CLAIM YOUR FREE TRIAL
             </button>
           </div>
-          <p className="text-sm text-center pt-4">by clicking the button, you are agreesing to our <a href="#" className="font-bold">Terms and Services</a></p>
+          <p className="text-sm text-center pt-4 text-gray-400">By clicking the button, you are agreesing to our <a href="#" className="font-bold text-red-700">Terms and Services</a></p>
 
         </form>
       </div>
     </div>
+    </>
   );
 };
 
