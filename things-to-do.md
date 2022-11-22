@@ -19,4 +19,19 @@
 # 2 - Work on the Desktop version
 # 3 - Add in the Validation
 # session started - 10:45
-# session finished - 
+# session finished - ???
+# Notes - Added in the rest of the content so first task done, got totally stuck on the second one (LMAO) will look at that next time
+
+# Session 4
+# 1 - Add in the Validation
+# Notes - spent approximately 30 mins on this as I could not be bothered to finish it, I got stuck as to why the validation wasn't working
+
+# Session 5
+# 1 - Add in the Validation
+# 2 - Research how to create the desktop version layout (Not done)
+# session started  - 10:45
+# session finished - finished 17:13 ( but didn't do much work consistently, continued at 11:16)
+# total duration - 1hr 30 mins (rough guess)
+# Link to where a hook, the useForm() function: https://jasonwatmore.com/post/2021/09/03/next-js-form-validation-example-with-react-hook-form
+# useful link for using fonts with google fonts: https://blog.logrocket.com/how-to-use-custom-fonts-tailwind-css/
+# Good Idea to research more into the useForm() hook and see what's going on
