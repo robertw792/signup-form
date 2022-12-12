@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { Heading } from "./components/heading";
-import { Form } from "./components/form";
+import Heading from "./components/heading";
+import Form from "./components/form";
 
 const Home: NextPage = () => {
   return (

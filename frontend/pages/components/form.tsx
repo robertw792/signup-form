@@ -1,9 +1,8 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { ErrorIcon } from "./error-icon";
 
-export const Form = () => {
+ const Form = () => {
   const validationSchema = yup.object().shape({
     firstName: yup.string().required("First Name cannot be empty"),
     lastName: yup.string().required("Last Name cannot be empty"),
@@ -102,7 +101,7 @@ export const Form = () => {
         </div>
         <p className="text-sm text-center pt-4 text-gray-400">
           By clicking the button, you are agreesing to our{" "}
-          <a href="#" className="font-bold text-red-700">
+          <a href="/api/link" className="font-bold text-red-700">
             Terms and Services
           </a>
         </p>
@@ -110,3 +109,4 @@ export const Form = () => {
     </>
   );
 };
+export default Form;

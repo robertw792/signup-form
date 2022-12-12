@@ -1,4 +1,4 @@
-export const Heading = () =>{
+const Heading = () =>{
 return (
   <>
 <div className="text-center">
@@ -20,3 +20,5 @@ return (
   </>
 );
 }
+
+export default Heading;
