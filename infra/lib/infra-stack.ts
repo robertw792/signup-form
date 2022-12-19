@@ -20,23 +20,40 @@ export class InfraStack extends cdk.Stack {
       removalPolicy: RemovalPolicy.DESTROY
     });
 
+    const CloudFrontWebDistribution = new cloudFront.CloudFrontWebDistribution(
+      this,
+      "SignUpWebDistribution",
+      {
+        originConfigs:[
+          {
+            behaviors: [
+            {
+              isDefaultBehavior: true,              
+            },            
+            ]
+          },
+        ]
+      }
+    )
+
+
     // creating the api resource
-    this.api = new apigateway.RestApi(this, "LinkApi",{
-      restApiName: "sign-up-link-api",
-      description: "Sign up link API",
-      binaryMediaTypes: ["*/*"],
-      minimumCompressionSize: 0
-    })
-    // give a value to the apiResource
-    const apiResource = this.api.root.addResource("api");
+    // this.api = new apigateway.RestApi(this, "LinkApi",{
+    //   restApiName: "sign-up-link-api",
+    //   description: "Sign up link API",
+    //   binaryMediaTypes: ["*/*"],
+    //   minimumCompressionSize: 0
+    // })
+    // // give a value to the apiResource
+    // const apiResource = this.api.root.addResource("api");
     
-    const linkResource = apiResource.addResource("link");    
+    // const linkResource = apiResource.addResource("link");    
     
-    const getLinkApi = new apigateway.LambdaIntegration(link,{
-      requestTemplates: {"application/json": '{"statusCode: "200"}'}
-    });
+    // const getLinkApi = new apigateway.LambdaIntegration(link,{
+    //   requestTemplates: {"application/json": '{"statusCode: "200"}'}
+    // });
     
-    linkResource.addMethod("GET", getLinkApi);
+    // linkResource.addMethod("GET", getLinkApi);
 
     // Deployment
     new s3Deployment.BucketDeployment(this, "CdkDeployBucket", {
