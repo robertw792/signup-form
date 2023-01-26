@@ -12,7 +12,7 @@ export class InfraStack extends cdk.Stack {
       entry: 'api/link.ts',   
       handler: 'lambdaHandler'
     })
-
+ 
     // s3
     const myBuck = new s3.Bucket(this, "CdkBucket", {
       publicReadAccess: true,
